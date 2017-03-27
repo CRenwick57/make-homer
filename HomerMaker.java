@@ -29,7 +29,19 @@ public class HomerMaker {
 		return pointsL;
 	}
 	
-	public static Frame makeHomer(Point p){
+	public static void makeHomer(int x, int y){
+		ArrayList<Point> points = HomerMaker.setPoints(x, y);
+    	HomerMaker.makeHead(points.get(0));
+    	HomerMaker.makeNose(points.get(1));
+    	HomerMaker.makeEye(points.get(2));
+    	HomerMaker.makeEye(points.get(3));
+    	HomerMaker.makeBeard(points.get(4));
+    	HomerMaker.makeEar(points.get(5));
+    	HomerMaker.makeSideburns(points.get(6));
+    	HomerMaker.makeHair(points.get(7));
+	}
+	
+	public static Frame makeHead(Point p){
 		Frame homer = new Frame();
 		Color c = new Color(255,255,0);
 		Dimension d = new Dimension(350, 600);
