@@ -46,6 +46,7 @@ public class HomerMaker {
 		homer.setSize(d);
         homer.setLocation(p);
         homer.getContentPane().setBackground(c);
+	homer.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         homer.setVisible(true);
 		return homer;
 	}
