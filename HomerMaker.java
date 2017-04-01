@@ -1,11 +1,11 @@
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
-import java.awt.Frame;
 import java.awt.Point;
 import java.util.ArrayList;
 
 import javax.swing.JLabel;
+import javax.swing.JFrame;
 
 public class HomerMaker {
 	
@@ -39,19 +39,19 @@ public class HomerMaker {
     	HomerMaker.makeHair(points.get(7));
 	}
 	
-	public static Frame makeHead(Point p){
-		Frame homer = new Frame();
+	public static JFrame makeHead(Point p){
+		JFrame homer = new JFrame();
 		Color c = new Color(255,255,0);
 		Dimension d = new Dimension(350, 600);
 		homer.setSize(d);
         homer.setLocation(p);
-        homer.setBackground(c);;
+        homer.getContentPane().setBackground(c);
         homer.setVisible(true);
 		return homer;
 	}
 	
-	public static Frame makeEye(Point p){
-		Frame eye = new Frame();
+	public static JFrame makeEye(Point p){
+		JFrame eye = new JFrame();
 		eye.setSize(100, 100);
 		eye.setLocation(p);
 		JLabel pupil = new JLabel("   .");
@@ -60,16 +60,17 @@ public class HomerMaker {
 		Font f = new Font("Arial", 1, 70);
 		pupil.setFont(f);
 		eye.add(pupil);
+                eye.getContentPane().setBackground(Color.white);
 		eye.setVisible(true);
 		return eye;
 	}
 	
-	public static Frame makeBeard(Point p){
-		Frame beard = new Frame();
+	public static JFrame makeBeard(Point p){
+		JFrame beard = new JFrame();
 		beard.setSize(310, 250);
 		beard.setLocation(p);
 		Color c = new Color(188, 145, 101);
-		beard.setBackground(c);
+		beard.getContentPane().setBackground(c);
 		JLabel mouth = new JLabel("\\_______");
 		Font f = new Font("Arial", 1, 70);
 		mouth.setFont(f);
@@ -78,12 +79,12 @@ public class HomerMaker {
 		return beard;
 	}
 	
-	public static Frame makeNose(Point p){
-		Frame nose = new Frame();
+	public static JFrame makeNose(Point p){
+		JFrame nose = new JFrame();
 		nose.setSize(100, 100);
 		nose.setLocation(p);
 		Color c = new Color(255, 255, 0);
-		nose.setBackground(c);
+		nose.getContentPane().setBackground(c);
 		JLabel n = new JLabel("   >");
 		Font f = new Font("Arial", 1, 70);
 		n.setFont(f);
@@ -92,12 +93,12 @@ public class HomerMaker {
 		return nose;
 	}
 	
-	public static Frame makeEar(Point p){
-		Frame ear = new Frame();
+	public static JFrame makeEar(Point p){
+		JFrame ear = new JFrame();
 		ear.setSize(100, 100);
 		ear.setLocation(p);
 		Color c = new Color(255, 255, 0);
-		ear.setBackground(c);
+		ear.getContentPane().setBackground(c);
 		JLabel n = new JLabel(" G");
 		Font f = new Font("Arial", 1, 70);
 		n.setFont(f);
@@ -106,12 +107,12 @@ public class HomerMaker {
 		return ear;
 	}
 	
-	public static Frame makeSideburns(Point p){
-		Frame sideburns = new Frame();
+	public static JFrame makeSideburns(Point p){
+		JFrame sideburns = new JFrame();
 		sideburns.setSize(100, 100);
 		sideburns.setLocation(p);
 		Color c = new Color(255, 255, 0);
-		sideburns.setBackground(c);
+		sideburns.getContentPane().setBackground(c);
 		JLabel hair = new JLabel("M");
 		Font f = new Font("Arial", 1, 70);
 		hair.setFont(f);
@@ -120,12 +121,12 @@ public class HomerMaker {
 		return sideburns;
 	}
 
-	public static Frame makeHair(Point p){
-		Frame hair = new Frame();
+	public static JFrame makeHair(Point p){
+		JFrame hair = new JFrame();
 		hair.setSize(100, 100);
 		hair.setLocation(p);
 		Color c = new Color(255, 255, 0);
-		hair.setBackground(c);
+		hair.getContentPane().setBackground(c);
 		JLabel hairs = new JLabel(" X");
 		Font f = new Font("Arial", 1, 70);
 		hairs.setFont(f);
@@ -134,4 +135,10 @@ public class HomerMaker {
 		return hair;
 	}
 	
+
+	
+        public static void main(String[] args){
+            makeHomer(400,100);
+        }
+        
 }
