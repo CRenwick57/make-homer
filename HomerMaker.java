@@ -2,14 +2,12 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Point;
-import java.util.ArrayList;
-
 import javax.swing.JLabel;
 import javax.swing.JFrame;
 
 public class HomerMaker {
 	
-	public static ArrayList<Point> setPoints(int x, int y){
+	public static Point[] setPoints(int x, int y){
 		Point pHead = new Point(x, y);
 		//x = 400, y = 100
 		Point pEyeLeft = new Point(x+150, y+150);
@@ -20,23 +18,19 @@ public class HomerMaker {
     		Point pSide = new Point(x, y+120);
     		Point pHair = new Point(x+100, y-25);
 		Point[] points = new Point[]{pHead, pNose, pEyeRight, pEyeLeft, pBeard, pEar, pSide, pHair};
-		ArrayList<Point> pointsL= new ArrayList<Point>();
-		for (Point p : points){
-			pointsL.add(p);
-		}
-		return pointsL;
+		return points;
 	}
 	
 	public static void makeHomer(int x, int y){
-		ArrayList<Point> points = HomerMaker.setPoints(x, y);
-    		HomerMaker.makeHead(points.get(0));
-    		HomerMaker.makeNose(points.get(1));
-    		HomerMaker.makeEye(points.get(2));
-    		HomerMaker.makeEye(points.get(3));
-    		HomerMaker.makeBeard(points.get(4));
-    		HomerMaker.makeEar(points.get(5));
-    		HomerMaker.makeSideburns(points.get(6));
-    		HomerMaker.makeHair(points.get(7));
+		Point[] points = HomerMaker.setPoints(x, y);
+    		HomerMaker.makeHead(points[0]);
+    		HomerMaker.makeNose(points[1]);
+    		HomerMaker.makeEye(points[2]);
+    		HomerMaker.makeEye(points[3]);
+    		HomerMaker.makeBeard(points[4]);
+    		HomerMaker.makeEar(points[5]);
+    		HomerMaker.makeSideburns(points[6]);
+    		HomerMaker.makeHair(points[7]);
 	}
 	
 	public static JFrame makeHead(Point p){
