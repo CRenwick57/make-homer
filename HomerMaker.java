@@ -15,10 +15,10 @@ public class HomerMaker {
 		Point pEyeLeft = new Point(x+150, y+150);
 		Point pEyeRight = new Point(x+270, y+150);
 		Point pBeard = new Point(x+150, y+300);
-    	Point pNose = new Point(x+250, y+220);
-    	Point pEar = new Point(x-60, y+250);
-    	Point pSide = new Point(x, y+120);
-    	Point pHair = new Point(x+100, y-25);
+    		Point pNose = new Point(x+250, y+220);
+    		Point pEar = new Point(x-60, y+250);
+    		Point pSide = new Point(x, y+120);
+    		Point pHair = new Point(x+100, y-25);
 		Point[] points = new Point[]{pHead, pNose, pEyeRight, pEyeLeft, pBeard, pEar, pSide, pHair};
 		ArrayList<Point> pointsL= new ArrayList<Point>();
 		for (Point p : points){
@@ -29,14 +29,14 @@ public class HomerMaker {
 	
 	public static void makeHomer(int x, int y){
 		ArrayList<Point> points = HomerMaker.setPoints(x, y);
-    	HomerMaker.makeHead(points.get(0));
-    	HomerMaker.makeNose(points.get(1));
-    	HomerMaker.makeEye(points.get(2));
-    	HomerMaker.makeEye(points.get(3));
-    	HomerMaker.makeBeard(points.get(4));
-    	HomerMaker.makeEar(points.get(5));
-    	HomerMaker.makeSideburns(points.get(6));
-    	HomerMaker.makeHair(points.get(7));
+    		HomerMaker.makeHead(points.get(0));
+    		HomerMaker.makeNose(points.get(1));
+    		HomerMaker.makeEye(points.get(2));
+    		HomerMaker.makeEye(points.get(3));
+    		HomerMaker.makeBeard(points.get(4));
+    		HomerMaker.makeEar(points.get(5));
+    		HomerMaker.makeSideburns(points.get(6));
+    		HomerMaker.makeHair(points.get(7));
 	}
 	
 	public static JFrame makeHead(Point p){
@@ -44,10 +44,10 @@ public class HomerMaker {
 		Color c = new Color(255,255,0);
 		Dimension d = new Dimension(350, 600);
 		homer.setSize(d);
-        homer.setLocation(p);
-        homer.getContentPane().setBackground(c);
-	homer.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        homer.setVisible(true);
+        	homer.setLocation(p);
+        	homer.getContentPane().setBackground(c);
+		homer.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        	homer.setVisible(true);
 		return homer;
 	}
 	
